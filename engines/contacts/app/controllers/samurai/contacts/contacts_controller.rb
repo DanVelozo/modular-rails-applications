@@ -5,7 +5,7 @@ module Samurai::Contacts
     before_action :set_contact, only: [:show, :edit, :update, :destroy]
 
     def index
-      @contacts = Contact.all
+      @contacts = current_user.all
     end
 
     def show
