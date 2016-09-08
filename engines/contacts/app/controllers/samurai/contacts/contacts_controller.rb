@@ -6,7 +6,7 @@ module Samurai::Contacts
     authorize_resource class: Samurai::Contacts::Contact
 
     def index
-      @contacts = current_user.all
+      @contacts = Contact.all
     end
 
     def show
